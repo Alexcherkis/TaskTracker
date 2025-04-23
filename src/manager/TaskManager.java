@@ -8,27 +8,30 @@ import java.util.List;
 
 public interface TaskManager {
     // Методы для работы с Task
-    List<Task> getAllTasks();
-    Task getTaskById(int id);
-    void createTask(Task task);
+    List<Task> getTasks();
+    Task getTask(int id);
+    int addNewTask(Task task);
     void updateTask(Task task);
-    void removeTaskById(int id);
-    void removeAllTasks();
+    void deleteTask(int id);
+    void deleteTasks();
 
     // Методы для работы с Epic
-    List<Epic> getAllEpics();
-    Epic getEpicById(int id);
-    void createEpic(Epic epic);
+    List<Epic> getEpics();
+    Epic getEpic(int id);
+    int addNewEpic(Epic epic);
     void updateEpic(Epic epic);
-    void removeEpicById(int id);
-    void removeAllEpics();
+    void deleteEpic(int id);
+    void deleteEpics();
 
     // Методы для работы с Subtask
-    List<Subtask> getAllSubtasks();
-    Subtask getSubtaskById(int id);
-    List<Subtask> getSubtasksByEpicId(int epicId);
-    void createSubtask(Subtask subtask);
+    List<Subtask> getSubtasks();
+    Subtask getSubtask(int id);
+    List<Task> getEpicSubtasks(int epicId);
+    int addNewSubtask(Subtask subtask);
     void updateSubtask(Subtask subtask);
-    void removeSubtaskById(int id);
-    void removeAllSubtasks();
+    void deleteSubtask(int id);
+    void deleteSubtasks();
+
+    // Метод для истории просмотров
+    List<Task> getHistory();
 }
