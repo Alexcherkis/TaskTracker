@@ -25,6 +25,7 @@ public class Main {
         manager.addNewSubtask(sub1);
         manager.addNewSubtask(sub2);
         manager.addNewSubtask(sub3);
+        // Sprint 6 fix
 
         Epic epic2 = new Epic("Эпик 2", "Эпик без подзадач");
         manager.addNewEpic(epic2);
